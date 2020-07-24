@@ -51,6 +51,27 @@ public class Q48 implements ShouldKeepInMind {
         }
     }
 
+
+    /**
+     * - 初始矩阵
+     * <pre>
+     * 1 2 3
+     * 4 5 6
+     * 7 8 9
+     * </pre>
+     * - 转置 -
+     * <pre>
+     * 1 4 7
+     * 2 5 8
+     * 3 6 9
+     * </pre>
+     * - 最后一行和第一行互换
+     * <pre>
+     * 7 4 1
+     * 8 5 2
+     * 9 6 3
+     * </pre>
+     */
     public void rotate(int[][] matrix) {
         // 转置
         int rank = matrix.length;
@@ -62,6 +83,7 @@ public class Q48 implements ShouldKeepInMind {
             }
         }
         System.out.println(Utils.arrayToMatrixString(matrix));
+
         // 第 i 列和第 (rank - i - 1) 列数据互换
         for (int row = 0; row < rank; row++) {
             for (int col = 0; col < rank / 2; col++) {
@@ -72,16 +94,3 @@ public class Q48 implements ShouldKeepInMind {
         }
     }
 }
-/*
-1 2 3
-4 5 6
-7 8 9
-- 转置 -
-1 4 7
-2 5 8
-3 6 9
-- 最后一行和第一行互换
-7 4 1
-8 5 2
-9 6 3
- */
